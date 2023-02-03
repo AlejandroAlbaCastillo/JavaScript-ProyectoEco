@@ -1,0 +1,55 @@
+#container{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    object-fit: none;
+    
+}
+#fotos{
+    height: 400px;
+    width: 400px;
+}
+button{
+    height: min-content;
+    border-radius: 30px;
+    border:none;
+}
+.visible {
+    opacity: 1;
+    /* animation-delay: 1s; */
+    animation: aparecer 1s;
+}
+
+.oculto {
+    opacity: 0;
+    animation: desvanecer 1s;
+    /*Esta siguiente línea evita que podamos arrastrar la imagen o hacer click en
+        su enlace.*/
+    pointer-events: none;
+}
+
+@keyframes desvanecer {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
